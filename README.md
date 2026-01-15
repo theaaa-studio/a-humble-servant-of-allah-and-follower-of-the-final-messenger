@@ -7,7 +7,7 @@ One central hub for all our Islamic content, including the Islamic Shorts Editor
 This project serves as a landing page to connect users with various resources:
 - **Islamic Shorts Editor**: A tool to create beautiful Quran & Hadith shorts.
 - **YouTube Channel**: Full-length lectures and compilations.
-- **Social Media**: Facebook and TikTok communities for daily reminders.
+- **Social Media**: Facebook Page and TikTok for daily reminders.
 
 ## 🚀 Features
 
