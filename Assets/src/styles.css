@@ -1,0 +1,288 @@
+@font-face {
+    font-family: 'ArabQuran';
+    src: url('../fonts/ArabQuranIslamic140-vnmnZ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'RamadhanAmazing';
+    src: url('../fonts/RamadhanAmazing-jEnDv.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    /* Color Palette - Light Mode */
+    --bg-color: #FBFCFA;
+    --text-color: #191C1A;
+    --text-secondary: #414942;
+    --accent-color: #006135;
+    --accent-hover: #004D2A;
+    --card-bg: #FFFFFF;
+    --card-border: #E1E3DE;
+    --nav-bg: rgba(251, 252, 250, 0.8);
+
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --radius-lg: 16px;
+    --radius-md: 12px;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+
+    /* Typography */
+    --font-heading: 'Outfit', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+    --bg-color: #191C1A;
+    --text-color: #E1E3DE;
+    --text-secondary: #C4C7C5;
+    --accent-color: #8FD6AF;
+    /* Lighter green for dark mode accessibility */
+    --accent-hover: #74B892;
+    --card-bg: #202522;
+    --card-border: #2D322F;
+    --nav-bg: rgba(25, 28, 26, 0.8);
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Floating Theme Toggle */
+.floating-theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--transition);
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.floating-theme-btn:hover {
+    transform: rotate(15deg) scale(1.1);
+    box-shadow: var(--shadow-md);
+    background: var(--card-border);
+}
+
+/* Bismillah Header */
+.bismillah-container {
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 0;
+}
+
+.bismillah-text {
+    /*font-family: 'ArabQuran', 'Aref Ruqaa', serif;*/
+    font-size: 2rem;
+    color: var(--accent-color);
+    /* Brand Green */
+    line-height: 1.6;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+@media (min-width: 768px) {
+    .bismillah-text {
+        font-size: 4.5rem;
+        /* Larger for calligraphy clarity */
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 1rem 0 2rem;
+    /* Reduced top padding since Bismillah is above */
+}
+
+.hero-logo {
+    height: 100px;
+    width: auto;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-family: 'RamadhanAmazing', var(--font-heading);
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+    background: linear-gradient(135deg, var(--text-color), var(--accent-color));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+    .hero h1 {
+        font-size: 5.5rem;
+    }
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+@media (min-width: 768px) {
+    .hero p {
+        font-size: 1.25rem;
+    }
+}
+
+/* Hub Grid */
+.hub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 4rem;
+}
+
+.hub-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    height: 100%;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    width: 70px;
+    height: 70px;
+    background: rgba(0, 97, 53, 0.08);
+    /* More subtle green */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+[data-theme="dark"] .card-icon {
+    background: rgba(143, 214, 175, 0.1);
+}
+
+.hub-card:hover .card-icon {
+    transform: scale(1.1);
+    background: var(--accent-color);
+    color: #fff;
+}
+
+.hub-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.hub-card p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    /* Pushes link to bottom */
+}
+
+.link-text {
+    font-weight: 600;
+    color: var(--accent-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: auto;
+}
+
+
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--card-border);
+    padding: 2rem 0;
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
