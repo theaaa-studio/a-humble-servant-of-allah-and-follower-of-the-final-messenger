@@ -13,6 +13,13 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="https://theaaa-studio.github.io/islamic-shorts-editor/assets/quran.ico">
+    <script>
+        // Immediate theme initialization to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </head>
 <body>
 
@@ -34,50 +41,56 @@
 
     <main class="container">
         
-        <div class="hub-grid scroll-reveal">
-            
-            <!-- Editor Tool Card -->
-            <a href="https://theaaa-studio.github.io/islamic-shorts-editor/" target="_blank" class="card hub-card editor-card">
-                <div class="card-icon"><i class="fas fa-edit"></i></div>
-                <h3>Islamic Shorts Editor</h3>
-                <p>Create Quran & Hadith shorts with beautiful templates.</p>
-                <span class="link-text">Open Tool</span>
-            </a>
+        <section class="hub-section scroll-reveal">
+            <h2 class="section-title">Our Products</h2>
+            <div class="hub-grid">
+                <!-- Editor Tool Card -->
+                <a href="https://theaaa-studio.github.io/islamic-shorts-editor/" target="_blank" class="card hub-card editor-card">
+                    <div class="card-icon"><i class="fas fa-edit"></i></div>
+                    <h3>Islamic Shorts Editor</h3>
+                    <p>Create Quran & Hadith shorts with beautiful templates.</p>
+                    <span class="link-text">Open Tool</span>
+                </a>
 
-            <!-- YouTube -->
-            <a href="https://www.youtube.com/@followerofthefinalmessenger" target="_blank" class="card hub-card youtube">
-                <div class="card-icon"><i class="fab fa-youtube"></i></div>
-                <h3>YouTube</h3>
-                <p>Watch full-length lectures and compilations.</p>
-                <span class="link-text">Visit Channel</span>
-            </a>
-
-            <!-- Facebook -->
-            <a href="https://www.facebook.com/profile.php?id=61580466869565" target="_blank" class="card hub-card facebook">
-                <div class="card-icon"><i class="fab fa-facebook-f"></i></div>
-                <h3>Facebook</h3>
-                <p>Follow our page for beneficial reminders.</p>
-                <span class="link-text">Follow Page</span>
-            </a>
-
-            <!-- TikTok -->
-            <a href="https://www.tiktok.com/@followeroffinalmessenger" target="_blank" class="card hub-card tiktok">
-                <div class="card-icon"><i class="fab fa-tiktok"></i></div>
-                <h3>TikTok</h3>
-                <p>Daily short reminders for your feed.</p>
-                <span class="link-text">Follow Us</span>
-            </a>
-
-        </div>
+                <!-- Minbar Link -->
+                <a href="https://minbar-link.pages.dev/landing" target="_blank" class="card hub-card minbar-link">
+                    <div class="card-icon">
+                        <img src="https://minbar-link.pages.dev/minbar_link_logo.png" alt="Minbar Link Logo">
+                    </div>
+                    <h3>Minbar Link</h3>
+                    <p>Share and discover beneficial speeches.</p>
+                    <span class="link-text">Open App</span>
+                </a>
+            </div>
+        </section>
 
     </main>
+ 
+     <footer class="footer">
+         <div class="container footer-container">
+            <img src="https://theaaa-studio.github.io/islamic-shorts-editor/assets/quran.png" alt="Footer Logo" class="footer-logo-small">
+            <p class="footer-tagline">One hub for all our Islamic products. <br> Serving the Ummah through digital innovation.</p>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 TheAAA. All rights reserved.</p>
-            <p class="attribution">Developed by <a href="https://theaaa-studio.github.io/site/" target="_blank">TheAAA</a></p>
-        </div>
-    </footer>
+            <div class="footer-socials">
+                <a href="https://www.youtube.com/@followerofthefinalmessenger" target="_blank" aria-label="YouTube">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61580466869565" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.tiktok.com/@followeroffinalmessenger" target="_blank" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-info">
+                <p>&copy; 2025 TheAAA. All rights reserved.</p>
+                <p class="attribution">Developed by <a href="https://theaaa-studio.github.io/site/" target="_blank">TheAAA</a></p>
+            </div>
+         </div>
+     </footer>
 
     <script src="Assets/src/script.js"></script>
 </body>

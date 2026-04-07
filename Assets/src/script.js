@@ -2,14 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Theme Toggle
     const themeToggle = document.getElementById('theme-toggle');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Check local storage or system preference
-    // Check local storage, default to light
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    
-    // Apply theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
+    // Theme is already initialized in <head>
+    let currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
     updateToggleIcon(currentTheme);
 
     themeToggle.addEventListener('click', () => {
